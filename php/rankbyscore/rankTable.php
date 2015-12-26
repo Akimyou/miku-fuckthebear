@@ -52,6 +52,9 @@
                 <h3 classclass="panel-title" align="center">
                     <strong><b><?php echo $gameName ?></b>排行榜</strong>
                 </h3>
+                <h3 classclass="panel-title" align="center">
+                    <a href="https://github.com/MIKUScallion/miku-fuckthebear" target="_blank">去github下载游戏源码吧</a>
+                </h3>
                 <h5 align="center">
                     <?php
                     if(isset($userName)&&isset($userPoint)){
@@ -61,13 +64,12 @@
                         <label>当前排名：<?php echo "&nbsp;".$userRank; ?></label>
                         <br />
                         <br />
-                        <a href="javascript:history.go(-1);"  class="btn btn-success">再玩一遍</a>
                     </div>
                     <?php
                         }
                     else{
                     ?>
-                       <a href="http://www.mikuscallion.com/miku-game/mygames/new_fuckthebear/" target="_blank" class="btn btn-success">我来玩一次</a> 
+                       <a href="../../index.html" target="_blank" class="btn btn-success">我来玩一次</a> 
                     <?php
                     }
                     ?>
