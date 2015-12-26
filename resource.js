@@ -1,0 +1,96 @@
+/*
+   资源列表
+*/
+var res = {
+    //开始背景层（StartBgLayer）资源
+    "startBg":"res/startBg.png",
+    "startBgMusic":"res/startBgMusic.mp3",
+    //开始菜单层(StartMenuLayer）资源
+    "startBtn_up":"res/startBtn_up.png",
+    "startBtn_down":"res/startBtn_down.png",
+    "rankBtn_up":"res/rankBtn_up.png",
+    "rankBtn_down":"res/rankBtn_down.png",
+    "installBtn_up":"res/installBtn_up.png",
+    "installBtn_down":"res/installBtn_down.png",
+        //开始与重新开始还有击杀小熊的音效
+    "startBtnEffect":"res/startBtnEffect.wav",
+    "normalBtnEffect":"res/normalBtnEffect.wav",
+    //游戏背景层(GameBgLayer)资源
+    "gameBg":"res/gameBg.png",
+    "gameBgMusic":"res/gameBgMusic.mp3",
+    //游戏主要层(GameMainLayer)资源
+    "oldBears":"res/oldBears.png",
+    "oldBears_plist":"res/oldBears.plist",
+    "newBears":"res/newBears.png",
+    "newBears_plist":"res/newBears.plist",
+        //小熊到达终点音效
+    "bearBeWinEffect":"res/bearBeWinEffect.wav",
+    //游戏HUD层(GameHudLayer)资源
+    "nowPoint":"res/nowPoint.png",
+    "highPoint":"res/highPoint.png",
+    "life":"res/life.png",
+    "combo":"res/combo.png",
+    "multNumx2":"res/multNumx2.png",
+    "multNumx3":"res/multNumx3.png",
+    "multNumx4":"res/multNumx4.png",
+    "multNumx5":"res/multNumx5.png",
+    "multNumx6":"res/multNumx6.png",
+    "multNumx7":"res/multNumx7.png",
+    "multNumx8":"res/multNumx8.png",
+    "multNumx9":"res/multNumx9.png",
+    //结束背景层(EndBgLayer)资源
+    "endBg":"res/endBg.png",
+    "endBgMusic":"res/endBgMusic.wav",
+    //结束菜单层(EndMenuLayer)资源
+    "restartBtn_up":"res/restartBtn_up.png",
+    "restartBtn_down":"res/restartBtn_down.png",
+    "uploadPointBtn_up":"res/uploadPointBtn_up.png",
+    "uploadPointBtn_down":"res/uploadPointBtn_down.png",
+};
+/*
+   全局资源（这里的资源会在游戏一开始加载，注意控制量）
+*/
+var g_resources = [
+    //开始背景层（StartBgLayer）资源
+    res.startBg,
+    res.startBgMusic,
+    //开始菜单层(StartMenuLayer）资源
+    res.startBtn_up,
+    res.startBtn_down,
+    res.rankBtn_up,
+    res.rankBtn_down,
+    res.installBtn_up,
+    res.installBtn_down,
+    res.startBtnEffect,
+    res.normalBtnEffect,
+    //游戏背景层(GameBgLayer)资源
+    res.gameBg,
+    res.gameBgMusic,
+    //游戏主要层(GameMainLayer)资源
+    res.oldBears,
+    res.oldBears_plist,
+    res.newBears,
+    res.newBears_plist,
+    res.bearBeWinEffect,
+    //游戏HUD层(GameHudLayer)资源
+    res.nowPoint,
+    res.highPoint,
+    res.life,
+    res.combo,
+    res.multNumx2,
+    res.multNumx3,
+    res.multNumx4,
+    res.multNumx5,
+    res.multNumx6,
+    res.multNumx7,
+    res.multNumx8,
+    res.multNumx9,
+    //结束背景层(EndBgLayer)资源
+    res.endBg,
+    res.endBgMusic,
+    //结束菜单层(EndMenuLayer)资源
+    res.restartBtn_up,
+    res.restartBtn_down,
+    res.uploadPointBtn_up,
+    res.uploadPointBtn_down
+];

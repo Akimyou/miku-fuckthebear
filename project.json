@@ -1,0 +1,32 @@
+{
+    "modules" : ["cocos2d"],
+    "debugMode"     : 1,
+    "frameRate"     : 480,
+    "showFPS"       : "true",
+    "id"            : "canvas",
+    "renderMode"    : 1,
+    "jsList"        : [
+                        "globals.js",
+                        "resource.js",
+                        "src/scene/StartScene.js",
+                        "src/layer/StartBgLayer.js",
+                        "src/layer/StartMenuLayer.js",
+                        "src/scene/GameScene.js",
+                        "src/layer/GameBgLayer.js",
+                        "src/layer/GameMainLayer.js",
+                        "src/layer/GameHudLayer.js",
+                        "src/scene/EndScene.js",
+                        "src/layer/EndBgLayer.js",
+                        "src/layer/EndMenuLayer.js",
+                        "src/sprite/OldBear.js",
+                        "src/sprite/OldGrayBear.js",
+                        "src/sprite/OldGraySuperBear.js",
+                        "src/sprite/OldGirlBear.js",
+                        "src/sprite/OldWhiteBear.js",
+                        "src/sprite/NewGrayBear.js",
+                        "src/sprite/NewGirlBear.js",
+                        "src/sprite/NewSkateboardBear.js",
+                        "src/sprite/NewSkullBear.js",
+                        "src/sprite/NewWhiteBear.js"
+                      ]
+}

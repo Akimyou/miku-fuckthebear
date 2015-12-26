@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>new fuckthebear</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #icStatus{
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        #rankTable{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!--分数上传弹框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+       <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel" align="center"><strong>上传您的分数</strong></h4>
+             </div>
+             <div class="modal-body">
+                 <form id="userResultForm"  class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="showPoint" class="col-xs-2 col-sm-2 col-md-2 col-lg-2  control-label">分数</label>
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <input readonly type="text" class="form-control" id="showPoint" />
+                        </div>
+                    </div>    
+                    
+                    <div class="form-group"> 
+                        <label for="userNameInput" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">昵称</label>
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <input type="text" class="form-control" id="userNameInput" name="userNiC" placeholder="请输您的游戏昵称" />
+                        </div>
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label for="userIcInput" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">验证码</label>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="text" class="form-control" id="userIcInput" name="identificalCode" placeholder="输入验证码" />
+                        </div>
+                        <div id="changeBtn" class="col-xs-7 col-sm-3 col-md-3 col-lg-3">
+                            <img id="icimg" alt="验证码"/>
+                        </div>
+                        <div class="hidden-xs col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <p id="icStatus" class="alert-info"></p>
+                        </div>
+<!--
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <a id="changeBtn" href="#">换一个</a>
+                        </div>
+-->
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <div align="center">
+                                <input id="submitBtn" type="submit" class="btn btn-primary" value="提交">
+                            </div>
+                        </div>
+                    </div>
+                 </form>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!--
+        注意：
+            此代码需要运行在服务器环境中否则无法正常加载资源文件
+            此项目加载的引擎版本是3.9lite压缩版
+            此项目默认针对的分辨率是ip5s横屏（568*320）
+            如果你代码跑在本地，那就无法使用排行版功能，除非你自己建立相关数据库与环境
+    -->
+    <canvas id="canvas" width="568" height="320"></canvas>
+    <div>
+        <a id="rankTable" href="php/rankbyscore/rankTable.php?gameId=1" target="_blank"></a>
+    </div>
+    <script src="vender/cocos2d-js-v3.9-lite-min.js"></script>
+    <script src="main.js"></script>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="vender/rsa.js"></script>
+    <script src="vender/bigInt.js"></script>
+    <script src="vender/barrett.js"></script>
+    <script src="upload-point.js"></script>
+</body>
+</html>
