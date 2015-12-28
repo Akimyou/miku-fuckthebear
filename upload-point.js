@@ -44,7 +44,7 @@ function initIc(){
     $icStatus.text("正加载中");
     $(changeBtn).hide();
     time = new Date().getTime();
-    icimg.src = icBasePath+"getic.php?time="+time;
+    icimg.src = icBasePath+"getic.php?lang=zh&time="+time;
     userIcInput.value = "";
 }
 /*验证码部分结束*/
