@@ -6,6 +6,7 @@ var GameScene = cc.Scene.extend({
     timeCount:0,
     lastturn:0,
     currentTurn:1,
+    typeObj:{s:0,e:1},//2种熊
     //控制小熊刷新的参数－－结束
     //控制连击与倍率的参数－－开始
     corpsesArray:new Array(),
@@ -39,7 +40,7 @@ var GameScene = cc.Scene.extend({
     update:function(dt){
         if(this.lastturn < this.currentTurn){
                 this.lastturn = this.currentTurn;
-                var type = g.rand(4);
+                var type = g.rand(this.typeObj.s,this.typeObj.e);
                 var newBear = null;
                 if(type==0){
                     newBear = new OldGrayBear(cc.p(g.minX,g.rand(16,g.maxY)));
@@ -71,26 +72,31 @@ var GameScene = cc.Scene.extend({
         if(parseInt(this.timeCount/1000) >= 10){
             this.spaceTime = 800;
             //console.log("MIKU-愉快连击");
+            this.typeObj = {s:2,e:3};
         }
         //缓一口气
         if(parseInt(this.timeCount/1000) >= 20){
             this.spaceTime = 1000;
             //console.log("MIKU-缓一口气");
+            this.typeObj = {s:0,e:2};
         }
         //坚持住
         if(parseInt(this.timeCount/1000) >= 30){
-            this.spaceTime = 700;
+            this.spaceTime = 1000;
             //console.log("MIKU-坚持住");
+            this.typeObj = {s:3,e:3};
         }
         //好像有希望，终于到黎明了
         if(parseInt(this.timeCount/1000) >= 40){
             this.spaceTime = 1500;
             //console.log("MIKU-好像有希望，终于到黎明了");
+            this.typeObj = {s:4,e:8};
         }
         //到地狱了
         if(parseInt(this.timeCount/1000) >= 50){
             this.spaceTime = 400;
             //console.log("MIKU-到地狱了");
+            this.typeObj = {s:0,e:8};
         }
         if(this.corpsesArray.length <= this.minCorpsesArrayLength){
                 this.comboCount = 0;
